@@ -71,9 +71,10 @@ input[type="submit"] {
     min-width: 300px;
 }
   
+/* était dans l'exercice mais inutile */
 /* input[type="file"] {
     padding: 1px 2px;
-} */
+} */ 
   
 a {
     color: #dfdfe2;
