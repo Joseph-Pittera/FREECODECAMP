@@ -79,7 +79,7 @@ function uniteUnique(...arr) {
  .reduce((acc, val) => acc.concat(val), [])
  // réduit les valeurs aux valeurs uniques
  .reduce((acc, val) => {
-    if (acc.indexOf(val) == -1) {
+    if (!acc.includes(val)) {
       acc.push(val);
     }
     return acc;
