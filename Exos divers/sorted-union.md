@@ -74,11 +74,12 @@ uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
 ```js
 //ma solution :
 function uniteUnique(...arr) {
- return arr
- // concatene tous les tableaux en un seul
- .reduce((acc, val) => acc.concat(val), [])
- // réduit les valeurs aux valeurs uniques
- .reduce((acc, val) => {
+  return arr
+  // concatene tous les tableaux en un seul
+  //.reduce((acc, val) => acc.concat(val), [])
+  .flat()
+  // réduit les valeurs aux valeurs uniques
+  .reduce((acc, val) => {
     if (!acc.includes(val)) {
       acc.push(val);
     }
