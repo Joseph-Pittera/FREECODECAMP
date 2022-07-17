@@ -96,4 +96,10 @@ function uniteUnique(arr) {
       }));
   }, []);
 }
+//autre solution de FREECODECAMP très intéressante
+function uniteUnique() {
+  return [...arguments]
+    .flat()
+    .filter((item, ind, arr) => arr.indexOf(item) === ind);
+}
 ```
