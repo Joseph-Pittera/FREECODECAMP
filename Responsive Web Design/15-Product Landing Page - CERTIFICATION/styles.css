@@ -37,13 +37,6 @@ header {
   margin: 1rem 0 0 0;
 }
 
-/* #nav-bar {
-  position: fixed;
-  width: 100%;
-  text-align: center;
-  top: 0%;
-} */
-
 a {
   text-decoration:none;
   cursor: pointer;
@@ -119,7 +112,7 @@ form {
   margin: 0.5rem 0;
 }
 
-#video {
+#video-section {
   text-align: center;
   margin: 2rem 0;
 }

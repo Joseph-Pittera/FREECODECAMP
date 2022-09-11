@@ -1,0 +1,132 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-white: #f0f0f0;
+  --main-red: rgb(97, 1, 1);
+  --light-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+body {
+  min-height: 100vh;
+  font-family:  'Poppins', sans-serif;  
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  border-bottom: solid 1px;
+  line-height: 1.5;
+  max-width: 534px;
+  margin: auto;
+}
+
+h1, h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: var(--main-white);
+}
+
+p {
+  font-size: 25px;
+}
+
+nav {
+  height: 47px;
+  width: 100%;
+  background-color: var(--main-red);
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  box-shadow: 0 2px 2px rgb(0 0 0  / 50%);;
+}
+
+nav > a:hover {
+  background-color: var(--main-blue);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);;
+  padding: 10px;
+  font-size: large;
+}
+
+#welcome-section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, rgb(48, 45, 45), rgb(22, 19, 19)) ;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#welcome-section > p {
+  color: var(--light-red);
+  font-style: italic;
+  font-weight: 200;
+}
+
+#projects {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to right, rgb(78, 95, 139),rgb(52, 68, 112)) ;
+}
+
+#contact {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to right, rgb(57, 62, 60), rgb(57, 62, 70)) ;
+}
+
+.contact-links {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.contact-details {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+  transform: translateY(5px);
+}
+
+footer {
+  color: var(--main-white);
+  background: linear-gradient(to right, rgb(57, 62, 60), rgb(57, 62, 70)) ;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 1rem;
+  border-top: solid 3px var(--main-red);
+  height: 90px;
+}
