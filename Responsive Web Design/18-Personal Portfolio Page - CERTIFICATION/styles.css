@@ -11,25 +11,17 @@
   --main-red: rgb(97, 1, 1);
   --light-red: #be3144;
   --main-blue: #45567d;
-  --main-gray: #303841;
+  --main-gray: rgb(48, 45, 45);
+  --main-black:rgb(34, 31, 31);
 }
 
 body {
   min-height: 100vh;
-  font-family:  'Poppins', sans-serif;  
+  font-family:  'Poppins', sans-serif;
 }
 
 h1 {
   font-size: 3.5rem;
-}
-
-h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  border-bottom: solid 1px;
-  line-height: 1.5;
-  max-width: 534px;
-  margin: auto;
 }
 
 h1, h2 {
@@ -43,8 +35,16 @@ p {
   font-size: 25px;
 }
 
-nav {
-  height: 47px;
+a {
+  text-decoration: none;
+  color: var(--main-white);;
+}
+
+
+/* navbar */
+
+#navbar {
+  height: 66px;
   width: 100%;
   background-color: var(--main-red);
   margin-top: 0;
@@ -55,22 +55,27 @@ nav {
   box-shadow: 0 2px 2px rgb(0 0 0  / 50%);;
 }
 
-nav > a:hover {
-  background-color: var(--main-blue);
+#navbar-links {
+  padding-right: 10px;
 }
 
-a {
-  text-decoration: none;
-  color: var(--main-white);;
-  padding: 10px;
-  font-size: large;
+#navbar-links > a {
+  font-size: 1.4rem;
+  padding: 18px;
 }
+
+#navbar-links > a:hover {
+  background-color: var(--main-gray);
+}
+
+
+/* Welcome section */
 
 #welcome-section {
   display: flex;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to right, rgb(48, 45, 45), rgb(22, 19, 19)) ;
+  background: linear-gradient(to right, var(--main-gray), var(--main-black)) ;
   text-align: center;
   justify-content: center;
   flex-direction: column;
@@ -79,18 +84,71 @@ a {
 #welcome-section > p {
   color: var(--light-red);
   font-style: italic;
-  font-weight: 200;
+  font-weight: 400;
 }
+
+
+/* project section */
 
 #projects {
   display: flex;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
-  justify-content: center;
   flex-direction: column;
-  background: linear-gradient(to right, rgb(78, 95, 139),rgb(52, 68, 112)) ;
+  background: linear-gradient(to right, rgb(45 49 101),rgb(0 23 85)) ;
 }
+
+.projects-header {
+  font-size: 2.3rem;
+  font-weight: 700;
+  border-bottom: solid 1px;
+  line-height: 1.5;
+  max-width: 544px;
+  margin: 4rem auto;
+}
+
+.project-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 1rem;
+}
+
+.project-tile {
+  background-color: var(--main-black);
+  border-radius: 5px;
+  max-width: 350px;
+  margin: 1rem;
+}
+
+.project-tile > p {
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
+.project-tile:hover {
+  background-color: var(--main-gray);
+}
+
+.project-tile > img {
+  border-radius: 5px 5px 0 0;
+  object-fit: cover;
+  width: 100%;
+  height: calc(100% - 56px);
+}
+
+.code {
+  color: var(--main-black);
+  font-weight: 900;
+}
+
+.project-tile:hover .code {
+  color: var(--light-red);
+}
+
+
+/* contact section */
 
 #contact {
   display: flex;
@@ -99,11 +157,10 @@ a {
   text-align: center;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(to right, rgb(57, 62, 60), rgb(57, 62, 70)) ;
+  background: linear-gradient(to right, #db8404, #bc7000) ;
 }
 
 .contact-links {
-  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,14 +168,18 @@ a {
 }
 
 .contact-details {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   text-shadow: 2px 2px 1px #1f1f1f;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.1s ease-out;
+  padding: 18px;
 }
 
 .contact-details:hover {
-  transform: translateY(5px);
+  transform: scale(1.1);
 }
+
+
+/* footer */
 
 footer {
   color: var(--main-white);
@@ -128,5 +189,53 @@ footer {
   align-items: center;
   padding-right: 1rem;
   border-top: solid 3px var(--main-red);
-  height: 90px;
+  height: 70px;
+  font-size: 0.9rem;
+}
+
+
+
+/* media queries */
+
+@media (max-width: 680px) {
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 20px;
+  }
+
+  /* navbar */
+  #navbar {
+    height: 46px;
+  }
+  #navbar-links > a {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  /* project section */
+  .projects-header {
+    font-size: 2rem;
+    margin: 3rem auto;
+  }
+  .project-tile {
+    max-width: 300px;
+  }
+  .project-tile > p {
+    font-size: 1rem;
+  }
+  
+  /* contact section */
+  .contact-details {
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.1s ease-out;
+  }
+
+  /* footer */
+  footer {
+    height: 50px;
+    font-size: 0.8rem;
+  }
 }
