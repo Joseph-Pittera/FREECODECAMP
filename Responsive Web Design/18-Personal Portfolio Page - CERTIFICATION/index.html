@@ -65,16 +65,16 @@
           id="profile-link"
           href="https://github.com/Joseph-Pittera"
           target="_blank"
-          class="btn contact-details"
+          class="contact-details"
           ><i class="fab fa-github"></i> GitHub</a
         >
         <a
           href="https://www.linkedin.com/in/joseph-pittera-a34a2030/"
           target="_blank"
-          class="btn contact-details"
+          class="contact-details"
           ><i class="fab fa-linkedin"></i> LinkedIn</a
         >
-        <a href="mailto:pittera.joseph@gmail.com" class="btn contact-details"
+        <a href="mailto:pittera.joseph@gmail.com" class="contact-details"
           ><i class="fas fa-at"></i> Send an email</a
         >
       </div>
@@ -85,88 +85,4 @@
       © Created by Joseph Pittera for the freeCodeCamp certification exam
     </div>
   </footer>
-
-  <script>
-    function resize() {
-      var vheight = $(window).height();
-      var vwidth = $(window).width();
-      $(".fullsize-background").css({
-        height: vheight,
-        width: vwidth,
-      });
-    }
-
-    // The scroll-up function
-    function scrollUp() {
-      var vheight = $(window).height();
-      $("html, body").animate(
-        {
-          scrollTop: (Math.ceil($(window).scrollTop() / vheight) - 1) * vheight,
-        },
-        500
-      );
-    }
-
-    // The scroll-down function
-    function scrollDown() {
-      var vheight = $(window).height();
-      $("html, body").animate(
-        {
-          scrollTop:
-            (Math.floor($(window).scrollTop() / vheight) + 1) * vheight,
-        },
-        500
-      );
-    }
-
-    // Do stuff when document is ready
-    $(document).ready(function () {
-      // Resize Container Function
-      resize();
-
-      // Click to Scroll DOWN Functions
-      $(".scroll-next").click(function (event) {
-        scrollDown();
-        event.preventDefault();
-      });
-
-      // Click to Scroll UP Functions
-      $(".scroll-prev").click(function (event) {
-        scrollUp();
-        event.preventDefault();
-      });
-    });
-
-    // Key Events
-    $(document).keydown(function (e) {
-      if (e.keyCode == 40) {
-        scrollDown();
-      }
-      if (e.keyCode == 34) {
-        scrollDown();
-      }
-      if (e.keyCode == 33) {
-        scrollUp();
-      }
-      if (e.keyCode == 38) {
-        scrollUp();
-      }
-      e.preventDefault;
-    });
-
-    // Mousewheel events
-    $(window).bind("mousewheel", function (event) {
-      if (event.originalEvent.wheelDelta >= 0) {
-        scrollDown();
-      } else {
-        scrollUp();
-      }
-      event.preventDefault;
-    });
-
-    // Resize Container on window resize
-    $(window).resize(function () {
-      resize();
-    });
-  </script>
 </html>
